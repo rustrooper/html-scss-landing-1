@@ -1,0 +1,95 @@
+@use "variables" as vars;
+
+.card {
+  &_service {
+    border-radius: vars.$radius-card;
+    border: 1px solid vars.$color-dark;
+    box-shadow: 0 5px 0 0 vars.$color-dark;
+
+    padding: 5rem;
+
+    width: 100%;
+    max-width: 60rem;
+    min-height: 31rem;
+
+    background-color: vars.$color-grey;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas: "title img" "link img";
+
+    @media all and (max-width: vars.$media-m) {
+      grid-template-areas: "title title" "link img";
+      grid-template-rows: auto;
+      max-width: 100%;
+      row-gap: 3rem;
+    }
+
+    .link {
+      grid-area: link;
+      margin-top: auto;
+
+      &__text {
+        @media all and (max-width: vars.$media-m) {
+          display: none;
+        }
+      }
+    }
+
+    .card__img {
+      grid-area: img;
+      margin: auto 0 auto auto;
+
+      @media all and (max-width: vars.$media-m) {
+        max-width: 16.5rem;
+      }
+    }
+
+    .heading {
+      grid-area: title;
+    }
+  }
+
+  &_bg {
+    &_dark {
+      background-color: vars.$color-dark;
+    }
+
+    &_green {
+      background-color: vars.$color-green;
+    }
+  }
+
+  &_proposal {
+    display: grid;
+    grid-template-columns: 50rem;
+    justify-items: flex-start;
+
+    width: 100%;
+    padding: 6rem;
+    position: relative;
+
+    background-color: vars.$color-grey;
+    border-radius: vars.$radius-card;
+    row-gap: 2.6rem;
+
+    @media all and (max-width: vars.$media-m) {
+      grid-template-columns: 1fr;
+      padding: 5rem;
+      row-gap: 2rem;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      right: 13.5rem;
+      transform: translateY(-50%);
+
+      @media all and (max-width: vars.$media-m) {
+        display: none;
+      }
+    }
+  }
+}

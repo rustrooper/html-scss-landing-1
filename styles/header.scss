@@ -1,0 +1,28 @@
+@use "variables" as vars;
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  @media all and (max-width: vars.$media-m) {
+    padding: 0 2rem;
+  }
+}
+
+/* 
+all - любое устройство
+print - версия для печати документа
+screen - любые устройства с экранами
+speech - синтезаторы речи
+
+@media all (
+    max-width: 1200px - максимальная ширина, для которой будут применяться стили
+    min-width: 1200px - минимальная ширина, для которой будут применяться стили
+    aspect-ratio: 16/9
+    orientation: landscape или portrait
+    resolution: 200dpi
+    ... 
+) {
+  здесь пишем обычные стили
+} */

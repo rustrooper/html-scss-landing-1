@@ -1,0 +1,19 @@
+@use "variables" as vars;
+
+.logo {
+  width: 100%;
+  max-width: 22rem;
+
+  @media all and (max-width: vars.$media-m) {
+    max-width: 14.4rem;
+  }
+
+  &_header {
+    position: relative;
+    z-index: 2;
+  }
+
+  &_footer {
+    max-width: 18rem;
+  }
+}

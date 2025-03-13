@@ -1,0 +1,94 @@
+@use "variables" as vars;
+
+.section {
+  $this: &;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 7rem 0;
+
+  @media all and (max-width: vars.$media-m) {
+    padding: 0 2rem;
+    margin: 3rem 0;
+  }
+
+  &_first {
+    position: relative;
+
+    #{$this}__container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 53rem;
+      margin-bottom: 10.5rem;
+      row-gap: 3.5rem;
+
+      @media all and (max-width: vars.$media-m) {
+        margin: 0 auto 6rem;
+        max-width: 100rem;
+      }
+
+      @media all and (max-width: vars.$media-s) {
+        row-gap: 1rem;
+      }
+    }
+
+    p {
+      @media all and (max-width: vars.$media-s) {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  &_second {
+    #{$this}__cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-bottom: 12rem;
+
+      @media all and (max-width: vars.$media-m) {
+        margin-bottom: 7rem;
+        grid-template-columns: repeat(auto-fit, minmax(39rem, 1fr));
+        gap: 3rem;
+      }
+
+      @media all and (max-width: vars.$media-s) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @media all and (max-width: vars.$media-m) {
+      position: relative;
+      width: 100%;
+      max-width: 60rem;
+    }
+
+    @media all and (max-width: vars.$media-s) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__header {
+    display: flex;
+    column-gap: 4rem;
+    max-width: 80rem;
+    margin-bottom: 8rem;
+
+    @media all and (max-width: vars.$media-m) {
+      flex-direction: column;
+      row-gap: 3rem;
+      margin: 0 auto 4rem;
+
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}

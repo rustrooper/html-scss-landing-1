@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1240px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+@media all and (max-width: 1200px) {
+  .header {
+    padding: 0 20px;
+  }
+}
+
+.logo {
+  width: 100%;
+  max-width: 220px;
+
+  position: relative;
+  z-index: 2;
+}
+
+@media all and (max-width: 1200px) {
+  .logo {
+    max-width: 144px;
+  }
+}
+
+nav {
+  display: flex;
+  font-size: 20px;
+  gap: 40px;
+  align-items: center;
+  margin-left: auto;
+}
+
+@media all and (max-width: 1200px) {
+  nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    flex-direction: column;
+    background-color: white;
+    row-gap: 40px;
+    padding: 100px 60px 40px;
+    height: 100vh;
+    width: 100%;
+    max-width: 300px;
+    z-index: 1;
+
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+  }
+
+  nav.active {
+    transform: translateX(0);
+    transition: all 0.3s ease-in;
+  }
+}
+
+@media all and (max-width: 500px) {
+  nav {
+    max-width: 100%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  flex-shrink: 0;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 14px;
+  padding: 20px 35px;
+  font-size: 20px;
+  margin-left: 40px;
+}
+
+@media all and (max-width: 1200px) {
+  button {
+    display: none;
+  }
+}
+
+.menu {
+  width: 24px;
+  display: none;
+  margin-left: auto;
+  position: relative;
+  z-index: 2;
+}
+
+@media all and (max-width: 1200px) {
+  .menu {
+    display: block;
+  }
+}
+
+/* 
+all - любое устройство
+print - версия для печати документа
+screen - любые устройства с экранами
+speech - синтезаторы речи
+
+@media all (
+    max-width: 1200px - максимальная ширина, для которой будут применяться стили
+    min-width: 1200px - минимальная ширина, для которой будут применяться стили
+    aspect-ratio: 16/9
+    orientation: landscape или portrait
+    resolution: 200dpi
+    ... 
+) {
+  здесь пишем обычные стили
+} */

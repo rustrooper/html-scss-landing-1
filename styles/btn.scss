@@ -1,0 +1,70 @@
+@use "variables" as vars;
+
+.btn {
+  border-radius: 1.4rem;
+  padding: 2rem 3.5rem;
+  font-size: vars.$size-btn;
+  color: vars.$color-dark;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline-width: 0;
+
+  @media all and (max-width: vars.$media-m) {
+    width: 100%;
+  }
+
+  @media (hover: hover) {
+    transition: all 0.3s ease-out;
+
+    &:hover,
+    &:active {
+      transition: all 0.3s ease-in;
+    }
+  }
+
+  &_primary {
+    color: vars.$color-white;
+    background-color: vars.$color-dark;
+
+    @media (hover: hover) {
+      &:hover,
+      &:active {
+        color: vars.$color-black;
+        background-color: vars.$color-green;
+      }
+    }
+  }
+
+  &_secondary {
+    background-color: vars.$color-green;
+
+    @media (hover: hover) {
+      &:hover,
+      &:active {
+        color: vars.$color-white;
+        background-color: vars.$color-dark;
+      }
+    }
+  }
+
+  &_outline {
+    border: 1px solid vars.$color-dark;
+
+    @media (hover: hover) {
+      &:hover,
+      &:active {
+        color: vars.$color-white;
+        background-color: vars.$color-dark;
+      }
+    }
+  }
+
+  &_header {
+    margin-left: 4rem;
+
+    @media all and (max-width: vars.$media-m) {
+      display: none;
+    }
+  }
+}
