@@ -370,6 +370,12 @@ speech - синтезаторы речи
   border-radius: 0.7rem;
   padding: 0 0.7rem;
 }
+.heading_cases {
+  min-width: 27rem;
+}
+.heading_steps {
+  min-width: 41.2rem;
+}
 .heading_bg_white span {
   background-color: #ffffff;
 }
@@ -438,6 +444,11 @@ speech - синтезаторы речи
     grid-template-columns: 1fr;
   }
 }
+.section_fourth .section__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
 .section__img {
   position: absolute;
   top: 0;
@@ -460,6 +471,9 @@ speech - синтезаторы речи
   column-gap: 4rem;
   max-width: 80rem;
   margin-bottom: 8rem;
+}
+.section__header_cases {
+  max-width: 89rem;
 }
 @media all and (max-width: 1300px) {
   .section__header {
@@ -548,6 +562,90 @@ speech - синтезаторы речи
   .card_proposal img {
     display: none;
   }
+}
+
+.studies {
+  display: flex;
+  background-color: #191a23;
+  border-radius: 4.5rem;
+}
+.studies__case {
+  padding: 7rem 6.4rem 9.3rem 6rem;
+  position: relative;
+  flex: 1;
+}
+.studies__case:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  right: 0;
+  width: 1px;
+  height: 60%;
+  background-color: #ffffff;
+}
+.studies__case_description {
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.step {
+  border-radius: 4.5rem;
+  border: 1px solid #191a23;
+  box-shadow: 0 5px 0 0 #191a23;
+  width: 100%;
+  max-width: 123.4rem;
+  min-height: 16rem;
+  background-color: #f3f3f3;
+}
+.step__header {
+  display: flex;
+  align-items: center;
+  padding: 4rem 5.7rem;
+  border-radius: 4.5rem 4.5rem 0 0;
+}
+input[type=checkbox]:checked ~ .step__header {
+  padding: 4rem 5.7rem 0 5.7rem;
+}
+.step__number {
+  font-size: 6rem;
+  margin-right: 1.9rem;
+}
+.step .icon {
+  margin-left: auto;
+  cursor: pointer;
+}
+.step__content {
+  position: relative;
+  max-height: 0;
+  padding: 0 5.7rem;
+  border-radius: 0 0 4.5rem 4.5rem;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+.step__content::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  height: 1px;
+  width: 0%;
+  transition: width 0.3s ease-in-out;
+  background-color: #000000;
+}
+input[type=checkbox]:checked ~ .step__content {
+  max-height: 16rem;
+  padding-top: 6rem;
+  padding-bottom: 4.1rem;
+  transition: max-height 0.5s ease-in-out;
+}
+input[type=checkbox]:checked ~ .step__content::before {
+  top: 30%;
+  width: 90.7%;
+}
+.step input[type=checkbox] {
+  display: none;
+}
+input[type=checkbox]:checked ~ .step__header, input[type=checkbox]:checked ~ .step__content {
+  background-color: #b9ff66;
 }
 
 /*# sourceMappingURL=styles.css.map */

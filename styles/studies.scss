@@ -1,0 +1,29 @@
+@use 'variables' as vars;
+
+.studies {
+	display: flex;
+	// justify-content: space-between;
+	background-color: vars.$color-dark;
+	border-radius: 4.5rem;
+
+	&__case {
+		padding: 7rem 6.4rem 9.3rem 6rem;
+		position: relative;
+		flex: 1;
+
+		&:not(:last-child)::after {
+			content: '';
+			position: absolute;
+			top: 15%;
+			right: 0;
+			width: 1px;
+			height: 60%;
+			background-color: vars.$color-white;
+		}
+
+		&_description {
+			color: vars.$color-white;
+			margin-bottom: 2rem;
+		}
+	}
+}
