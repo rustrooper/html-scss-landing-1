@@ -1,0 +1,27 @@
+@use 'variables' as vars;
+
+.employee {
+	border-radius: vars.$radius-card;
+	border: 1px solid vars.$color-dark;
+	box-shadow: 0 5px 0 0 vars.$color-dark;
+
+	padding: 4rem 3.5rem;
+
+	width: 100%;
+	max-width: 38.7rem;
+	min-height: 35.4rem;
+
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: 1fr 1fr;
+
+	grid-template-areas: 'photo description' 'content content';
+
+	&__photo {
+		grid-area: photo;
+	}
+
+	&__description {
+		grid-area: description;
+	}
+}
