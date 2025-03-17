@@ -60,6 +60,14 @@
 		}
 	}
 
+	&_fifth {
+		#{$this}__team {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			gap: 4rem;
+		}
+	}
+
 	&_fourth {
 		#{$this}__steps {
 			display: flex;
