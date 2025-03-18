@@ -444,6 +444,11 @@ speech - синтезаторы речи
     grid-template-columns: 1fr;
   }
 }
+.section_fifth .section__team {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4rem;
+}
 .section_fourth .section__steps {
   display: flex;
   flex-direction: column;
@@ -646,6 +651,29 @@ input[type=checkbox]:checked ~ .step__content::before {
 }
 input[type=checkbox]:checked ~ .step__header, input[type=checkbox]:checked ~ .step__content {
   background-color: #b9ff66;
+}
+
+.employee {
+  border-radius: 4.5rem;
+  border: 1px solid #191a23;
+  box-shadow: 0 5px 0 0 #191a23;
+  padding: 4rem 3.5rem;
+  width: 100%;
+  max-width: 38.7rem;
+  min-height: 35.4rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "photo description" "content content";
+}
+.employee__photo {
+  grid-area: photo;
+}
+.employee__description {
+  grid-area: description;
+}
+.employee__content {
+  grid-area: content;
 }
 
 /*# sourceMappingURL=styles.css.map */

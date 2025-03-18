@@ -23,5 +23,11 @@
 
 	&__description {
 		grid-area: description;
+		// display: grid;
+		// grid-template-areas: 'fio' 'linkedIn';
+	}
+
+	&__content {
+		grid-area: content;
 	}
 }
