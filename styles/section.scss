@@ -60,19 +60,32 @@
 		}
 	}
 
-	&_fifth {
-		#{$this}__team {
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
-			gap: 4rem;
-		}
-	}
-
 	&_fourth {
 		#{$this}__steps {
 			display: flex;
 			flex-direction: column;
 			gap: 3rem;
+		}
+	}
+
+	&_fifth {
+		#{$this}__team {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			gap: 4rem;
+			margin-bottom: 4rem;
+		}
+	}
+
+	&_sixth {
+		#{$this}__slider {
+			border-radius: 4.5rem;
+		}
+	}
+
+	&_seventh {
+		#{$this}__form {
+			border-radius: 4.5rem;
 		}
 	}
 

@@ -254,6 +254,11 @@ speech - синтезаторы речи
     display: none;
   }
 }
+.btn_team {
+  margin-left: auto;
+  width: fit-content;
+  padding: 2rem 7.6rem;
+}
 
 .menu {
   width: 2.4rem;
@@ -444,15 +449,19 @@ speech - синтезаторы речи
     grid-template-columns: 1fr;
   }
 }
-.section_fifth .section__team {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 4rem;
-}
 .section_fourth .section__steps {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+.section_fifth .section__team {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+.section_sixth .section__slider {
+  border-radius: 4.5rem;
 }
 .section__img {
   position: absolute;
@@ -685,7 +694,7 @@ input[type=checkbox]:checked ~ .step__header, input[type=checkbox]:checked ~ .st
 }
 .employee__photo {
   grid-area: photo;
-  margin-right: 2rem;
+  margin-right: 1.9rem;
 }
 .employee__description {
   grid-area: description;
@@ -700,9 +709,88 @@ input[type=checkbox]:checked ~ .step__header, input[type=checkbox]:checked ~ .st
 .employee__linkedin {
   grid-area: linkedIn;
   text-align: right;
+  max-height: 3.4rem;
 }
 .employee__content {
   grid-area: content;
+}
+
+.slider {
+  padding: 8.4rem 0 6.8rem 0;
+  background-color: #191a23;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  gap: 12rem;
+}
+.slider__track {
+  display: flex;
+  justify-content: center;
+  width: max-content;
+  gap: 5rem;
+}
+.slider__card {
+  max-width: 60rem;
+}
+.slider__quote {
+  border: 1px solid #b9ff66;
+  color: #ffffff;
+  border-radius: 4rem;
+  padding: 5rem;
+  position: relative;
+  margin-bottom: 4rem;
+}
+.slider__quote::after {
+  content: "";
+  position: absolute;
+  bottom: -1.9rem;
+  left: 7rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #191a23;
+  border-left: 1px solid #b9ff66;
+  border-bottom: 1px solid #b9ff66;
+  transform: rotate(-45deg);
+}
+.slider__author {
+  padding-left: 8rem;
+}
+.slider__author h4 {
+  color: #b9ff66;
+}
+.slider__author p {
+  color: #ffffff;
+}
+.slider__controls {
+  display: flex;
+  max-width: 56.4rem;
+  max-height: 1.4rem;
+  gap: 19rem;
+}
+.slider__arrow {
+  fill: #ffffff;
+  width: 2rem;
+  height: 2rem;
+}
+.slider__arrow_right {
+  transform: rotate(30deg);
+}
+.slider__arrow_left {
+  transform: rotate(-150deg);
+}
+.slider__dots {
+  display: flex;
+  gap: 1.9rem;
+}
+.slider__dot {
+  width: 1.4rem;
+  height: 1.4rem;
+  fill: #ffffff;
+}
+.slider__dot_green {
+  fill: #b9ff66;
 }
 
 /*# sourceMappingURL=styles.css.map */
