@@ -1,0 +1,17 @@
+@use 'variables' as vars;
+
+.footer {
+	background-color: vars.$color-black;
+	border-radius: 4.5rem 4.5rem 0 0;
+	padding: 5.5rem 6rem 5rem;
+
+	&__header {
+		margin-bottom: 6.65rem;
+	}
+
+	&__links {
+		display: flex;
+		margin-left: 15.5rem;
+		gap: 2rem;
+	}
+}

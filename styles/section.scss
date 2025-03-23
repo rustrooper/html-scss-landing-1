@@ -86,6 +86,10 @@
 	&_seventh {
 		#{$this}__form {
 			border-radius: 4.5rem;
+			background-color: vars.$color-grey;
+
+			overflow: hidden;
+			position: relative;
 		}
 	}
 
@@ -113,6 +117,12 @@
 
 		&_cases {
 			max-width: 89rem;
+		}
+
+		&_contact-us {
+			p {
+				max-width: 32rem;
+			}
 		}
 
 		@media all and (max-width: vars.$media-m) {

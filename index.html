@@ -470,30 +470,59 @@
       </div>
     </section>
     <section class='section section_seventh'>
-      <div class='section__header'>
+      <div class='section__header section__header_contact-us'>
         <h2 class='heading heading_bg_green'><span>Contact Us</span></h2>
         <p>Connect with Us: Let's Discuss Your Digital Marketing Needs</p>
       </div>
       <div class='section__form'>
         <form class='form' action="">
           <div class='form__inner'>
-            <input type="radio" id='sayHi' name='sayHi' value='true'>
-            <label for="sayHi">Say Hi</label>
-            <input type="radio" id='getQuote' name='getQuote' value='true'>
-            <label for="sayHi">Get a Quote</label>
+            <div class='form__radio'>
+              <input type="radio" id='sayHi' name='group1'>
+              <label for="sayHi">Say Hi</label>
+            </div>
+            <div class='form__radio'>
+              <input type="radio" id='getQuote' name='group1'>
+              <label for="getQuote">Get a Quote</label>
+            </div>
           </div>
-          <label for="userName">Name</label>
-          <input type="text" id='userName' name='userName'>
-          <label for="email">Email*</label>
-          <input type="email" id='email' name='userEmail'>
-          <label for="userMessage">Message</label>
-          <input type="text" id='userMessage' name='userMessage'>
-          <button type='submit'>Send Message</button>
+          <div class='form__inputs'>
+            <label for="userName">Name</label>
+            <input type="text" id='userName' name='userName' placeholder='Name' required>
+            <label for="email">Email*</label>
+            <input type="email" id='email' name='userEmail' placeholder='Email' required>
+            <label for="userMessage">Message</label>
+            <textarea type="text" id='userMessage' name='userMessage' placeholder='Message'></textarea>
+          </div>
+          <button class="btn btn_primary form__btn" type='submit'>Send Message</button>
         </form>
+        <img class='form__img' src="./assets/img/contact-us-img.png" alt="">
       </div>
     </section>
+    <footer class='footer'>
+      <div class='header footer__header'>
+        <img src="./assets/img/logo-white.png" alt="" class="logo logo_footer" />
+        <nav class="nav nav_footer">
+          <a class="nav__link" href="">About us</a>
+          <a class="nav__link" href="">Services</a>
+          <a class="nav__link" href="">Use Cases</a>
+          <a class="nav__link" href="">Pricing</a>
+          <a class="nav__link" href="">Blog</a>
+        </nav>
+        <div class='footer__links'>
+          <a class='footer__link' href="">
+            <img src="./assets/img/linkedIn-icon-white.png" alt="">
+          </a>
+          <a class='footer__link' href="">
+            <img src="./assets/img/faceBook-icon-white.png" alt="">
+          </a>
+          <a class='footer__link' href="">
+            <img src="./assets/img/twitter-icon-white.png" alt="">
+          </a>
+        </div>
+      </div>
+    </footer>
   </div>
-
   </div>
 </body>
 

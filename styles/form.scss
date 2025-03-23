@@ -1,0 +1,84 @@
+@use 'variables' as vars;
+
+.form {
+	display: flex;
+	flex-direction: column;
+	max-width: 55.6rem;
+	margin: 6rem 0 8rem 10rem;
+
+	&__img {
+		position: absolute;
+		top: 8.1%;
+		bottom: 8.1%;
+		transform: translate(126%, 0);
+	}
+
+	&__inner {
+		display: flex;
+		margin-bottom: 4rem;
+		gap: 3.5rem;
+	}
+
+	&__radio {
+		display: flex;
+		align-items: center;
+		gap: 1.4rem;
+
+		label {
+			font-size: vars.$size-p;
+		}
+
+		input[type='radio'] {
+			appearance: none;
+			width: 2.8rem;
+			height: 2.8rem;
+			border: 1px solid #000;
+			border-radius: 50%;
+			cursor: pointer;
+			position: relative;
+		}
+
+		input[type='radio']::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 1.5rem; /* Размер внутреннего круга */
+			height: 1.5rem;
+			background-color: transparent; /* По умолчанию прозрачный */
+			border-radius: 50%;
+		}
+
+		input[type='radio']:checked::before {
+			background-color: vars.$color-green; /* Цвет внутреннего круга */
+		}
+	}
+
+	&__inputs {
+		margin-bottom: 4rem;
+		display: flex;
+		flex-direction: column;
+
+		input {
+			margin-bottom: 2.5rem;
+		}
+
+		label {
+			margin-bottom: 1.2rem;
+			font-size: vars.$size-p-mob;
+		}
+
+		input,
+		textarea {
+			font-size: vars.$size-p;
+			padding: 1.8rem 3rem;
+			border-radius: 1.4rem;
+			border: 1px solid vars.$color-dark;
+		}
+
+		textarea {
+			min-height: 19rem;
+		}
+	}
+}

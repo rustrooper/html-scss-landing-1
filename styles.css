@@ -194,6 +194,9 @@ speech - синтезаторы речи
   color: black;
   flex-shrink: 0;
 }
+.nav_footer .nav__link {
+  color: #ffffff;
+}
 
 .btn {
   border-radius: 1.4rem;
@@ -463,6 +466,12 @@ speech - синтезаторы речи
 .section_sixth .section__slider {
   border-radius: 4.5rem;
 }
+.section_seventh .section__form {
+  border-radius: 4.5rem;
+  background-color: #f3f3f3;
+  overflow: hidden;
+  position: relative;
+}
 .section__img {
   position: absolute;
   top: 0;
@@ -488,6 +497,9 @@ speech - синтезаторы речи
 }
 .section__header_cases {
   max-width: 89rem;
+}
+.section__header_contact-us p {
+  max-width: 32rem;
 }
 @media all and (max-width: 1300px) {
   .section__header {
@@ -791,6 +803,91 @@ input[type=checkbox]:checked ~ .step__header, input[type=checkbox]:checked ~ .st
 }
 .slider__dot_green {
   fill: #b9ff66;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 55.6rem;
+  margin: 6rem 0 8rem 10rem;
+}
+.form__img {
+  position: absolute;
+  top: 8.1%;
+  bottom: 8.1%;
+  transform: translate(126%, 0);
+}
+.form__inner {
+  display: flex;
+  margin-bottom: 4rem;
+  gap: 3.5rem;
+}
+.form__radio {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+.form__radio label {
+  font-size: 1.8rem;
+}
+.form__radio input[type=radio] {
+  appearance: none;
+  width: 2.8rem;
+  height: 2.8rem;
+  border: 1px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+.form__radio input[type=radio]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.5rem; /* Размер внутреннего круга */
+  height: 1.5rem;
+  background-color: transparent; /* По умолчанию прозрачный */
+  border-radius: 50%;
+}
+.form__radio input[type=radio]:checked::before {
+  background-color: #b9ff66; /* Цвет внутреннего круга */
+}
+.form__inputs {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+.form__inputs input {
+  margin-bottom: 2.5rem;
+}
+.form__inputs label {
+  margin-bottom: 1.2rem;
+  font-size: 1.6rem;
+}
+.form__inputs input,
+.form__inputs textarea {
+  font-size: 1.8rem;
+  padding: 1.8rem 3rem;
+  border-radius: 1.4rem;
+  border: 1px solid #191a23;
+}
+.form__inputs textarea {
+  min-height: 19rem;
+}
+
+.footer {
+  background-color: #000000;
+  border-radius: 4.5rem 4.5rem 0 0;
+  padding: 5.5rem 6rem 5rem;
+}
+.footer__header {
+  margin-bottom: 6.65rem;
+}
+.footer__links {
+  display: flex;
+  margin-left: 15.5rem;
+  gap: 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
