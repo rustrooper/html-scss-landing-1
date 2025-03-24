@@ -9,9 +9,58 @@
 		margin-bottom: 6.65rem;
 	}
 
+	&__title-h4 {
+		background-color: vars.$color-green;
+		border-radius: 0.7rem;
+		padding: 0 0.7rem;
+		width: fit-content;
+		margin-bottom: 2.7rem;
+	}
+
 	&__links {
 		display: flex;
 		margin-left: 15.5rem;
 		gap: 2rem;
+	}
+
+	&__middle {
+		display: flex;
+		justify-content: space-between;
+
+		&-left {
+			max-width: 33.2rem;
+		}
+
+		&-right {
+			display: flex;
+			gap: 2rem;
+			max-width: 63.4rem;
+			padding: 5.8rem 4rem;
+			background-color: vars.$color-dark;
+			border-radius: 1.4rem;
+
+			input {
+				color: vars.$color-white;
+				font-size: vars.$size-p;
+				max-width: 28.5rem;
+				padding: 2.2rem 3.5rem;
+				border-radius: 1.4rem;
+				border: 1px solid vars.$color-white;
+				background-color: transparent;
+			}
+
+			input::placeholder {
+				color: vars.$color-white;
+			}
+		}
+	}
+
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		p {
+			color: vars.$color-white;
+		}
 	}
 }

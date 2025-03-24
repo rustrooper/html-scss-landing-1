@@ -262,6 +262,10 @@ speech - синтезаторы речи
   width: fit-content;
   padding: 2rem 7.6rem;
 }
+.btn_footer {
+  width: fit-content;
+  line-height: 140%;
+}
 
 .menu {
   width: 2.4rem;
@@ -884,10 +888,52 @@ input[type=checkbox]:checked ~ .step__header, input[type=checkbox]:checked ~ .st
 .footer__header {
   margin-bottom: 6.65rem;
 }
+.footer__title-h4 {
+  background-color: #b9ff66;
+  border-radius: 0.7rem;
+  padding: 0 0.7rem;
+  width: fit-content;
+  margin-bottom: 2.7rem;
+}
 .footer__links {
   display: flex;
   margin-left: 15.5rem;
   gap: 2rem;
+}
+.footer__middle {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__middle-left {
+  max-width: 33.2rem;
+}
+.footer__middle-right {
+  display: flex;
+  gap: 2rem;
+  max-width: 63.4rem;
+  padding: 5.8rem 4rem;
+  background-color: #191a23;
+  border-radius: 1.4rem;
+}
+.footer__middle-right input {
+  color: #ffffff;
+  font-size: 1.8rem;
+  max-width: 28.5rem;
+  padding: 2.2rem 3.5rem;
+  border-radius: 1.4rem;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+}
+.footer__middle-right input::placeholder {
+  color: #ffffff;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer__contacts p {
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=styles.css.map */
