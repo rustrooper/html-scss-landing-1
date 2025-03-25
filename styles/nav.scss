@@ -7,25 +7,27 @@
 	align-items: center;
 	margin-left: auto;
 
-	@media all and (max-width: vars.$media-m) {
-		position: fixed;
-		right: 0;
-		top: 0;
-		flex-direction: column;
-		background-color: white;
-		row-gap: 4rem;
-		padding: 10rem 6rem 4rem;
-		height: 100vh;
-		width: 100%;
-		max-width: 30rem;
-		z-index: 1;
+	&_header {
+		@media all and (max-width: vars.$media-m) {
+			position: fixed;
+			right: 0;
+			top: 0;
+			flex-direction: column;
+			background-color: white;
+			row-gap: 4rem;
+			padding: 10rem 6rem 4rem;
+			height: 100vh;
+			width: 100%;
+			max-width: 30rem;
+			z-index: 1;
 
-		transform: translateX(100%);
-		transition: all 0.3s ease;
-	}
+			transform: translateX(100%);
+			transition: all 0.3s ease;
+		}
 
-	@media all and (max-width: vars.$media-s) {
-		max-width: 100%;
+		@media all and (max-width: vars.$media-s) {
+			max-width: 100%;
+		}
 	}
 
 	&_active {
