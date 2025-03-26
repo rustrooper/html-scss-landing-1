@@ -15,6 +15,7 @@
 
 	&_first {
 		position: relative;
+		// z-index: -1;
 
 		#{$this}__container {
 			display: flex;
