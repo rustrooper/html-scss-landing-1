@@ -117,20 +117,16 @@ p {
   align-items: center;
   width: 100%;
   justify-content: space-between;
+  z-index: 100;
 }
 @media all and (max-width: 1300px) {
   .header {
     padding: 0 2rem;
-    padding-top: 3rem;
   }
 }
-.header_header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  padding-top: 6rem;
+.header__right {
+  display: flex;
+  z-index: 200;
 }
 
 /* 
@@ -175,12 +171,17 @@ speech - синтезаторы речи
 @media all and (max-width: 1300px) {
   .nav_header {
     position: fixed;
-    padding-top: 30rem;
-    right: 100vw;
-    left: -100vw;
+    right: 0;
+    top: 0;
     flex-direction: column;
+    background-color: white;
     row-gap: 4rem;
-    z-index: -1;
+    padding: 10rem 6rem 4rem;
+    height: 100vh;
+    width: 100%;
+    max-width: 30rem;
+    z-index: 1;
+    transform: translateX(100%);
     transition: all 0.3s ease;
   }
   .nav_header #burger-toggle:checked {
@@ -275,19 +276,9 @@ speech - синтезаторы речи
   line-height: 140%;
 }
 
-.menu {
-  width: 2.4rem;
-  display: none;
-  position: relative;
-}
-@media all and (max-width: 1300px) {
-  .menu {
-    display: block;
-  }
-}
-
 .burger-menu {
   display: none;
+  z-index: 2;
 }
 
 #burger-toggle {
@@ -332,8 +323,7 @@ speech - синтезаторы речи
     top: 12px;
   }
   #burger-toggle:checked ~ .nav_header {
-    left: 0;
-    right: 0;
+    transform: translateX(0);
   }
 }
 .icon_plus, .icon_minus {
@@ -961,7 +951,6 @@ input[type=checkbox]:checked ~ .step__header, input[type=checkbox]:checked ~ .st
 }
 .footer__social-media {
   display: flex;
-  margin-left: 15.5rem;
   gap: 2rem;
 }
 .footer__middle {

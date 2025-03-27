@@ -9,20 +9,18 @@
 	&_header {
 		@media all and (max-width: vars.$media-m) {
 			position: fixed;
-			padding-top: 30rem;
-			right: 100vw;
-			left: -100vw;
-			// top: 0;
+			right: 0;
+			top: 0;
 			flex-direction: column;
-			// background-color: none;
+			background-color: white;
 			row-gap: 4rem;
-			// padding: 10rem 6rem 4rem;
-			// height: 100vh;
-			// width: 100%;
-			// max-width: 30rem;
-			z-index: -1;
+			padding: 10rem 6rem 4rem;
+			height: 100vh;
+			width: 100%;
+			max-width: 30rem;
+			z-index: 1;
 
-			// transform: translateX(100%);
+			transform: translateX(100%);
 			transition: all 0.3s ease;
 
 			#burger-toggle:checked {

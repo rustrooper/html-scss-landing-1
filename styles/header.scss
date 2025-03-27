@@ -5,19 +5,25 @@
 	align-items: center;
 	width: 100%;
 	justify-content: space-between;
+	z-index: 100;
 
 	@media all and (max-width: vars.$media-m) {
 		padding: 0 2rem;
-		padding-top: 3rem;
+		// padding-top: 3rem;
 	}
 
 	&_header {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 999;
-		padding-top: 6rem;
+		// position: fixed;
+		// top: 0;
+		// left: 0;
+		// right: 0;
+		// z-index: 999;
+		// padding-top: 6rem;
+	}
+
+	&__right {
+		display: flex;
+		z-index: 200;
 	}
 }
 
