@@ -6,11 +6,21 @@
 	max-width: 55.6rem;
 	margin: 6rem 0 8rem 10rem;
 
+	@media all and (max-width: vars.$media-m) {
+		max-width: 61.6rem;
+		margin: 6rem auto;
+		padding: 0 6rem;
+	}
+
 	&__img {
 		position: absolute;
 		top: 8.1%;
 		bottom: 8.1%;
 		transform: translate(126%, 0);
+
+		@media all and (max-width: vars.$media-m) {
+			display: none;
+		}
 	}
 
 	&__inner {

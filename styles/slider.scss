@@ -19,6 +19,10 @@
 
 	&__card {
 		max-width: 60rem;
+		// width: 100%;
+		@media all and (max-width: vars.$media-m) {
+			width: calc(100vw - 7rem);
+		}
 	}
 
 	&__quote {
@@ -28,6 +32,10 @@
 		padding: 5rem;
 		position: relative;
 		margin-bottom: 4rem;
+
+		@media all and (max-width: vars.$media-m) {
+			padding: 3rem;
+		}
 
 		&::after {
 			content: '';
@@ -58,6 +66,10 @@
 		max-width: 56.4rem;
 		max-height: 1.4rem;
 		gap: 19rem;
+
+		@media all and (max-width: vars.$media-m) {
+			gap: 4rem;
+		}
 	}
 
 	&__arrow {

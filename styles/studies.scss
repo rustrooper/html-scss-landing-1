@@ -2,14 +2,34 @@
 
 .studies {
 	display: flex;
-	// justify-content: space-between;
 	background-color: vars.$color-dark;
 	border-radius: 4.5rem;
+
+	@media all and (max-width: vars.$media-m) {
+		overflow: hidden;
+		background-color: transparent;
+		border-radius: 0;
+		gap: 2rem;
+	}
 
 	&__case {
 		padding: 7rem 6.4rem 9.3rem 6rem;
 		position: relative;
 		flex: 1;
+
+		@media all and (max-width: vars.$media-m) {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			background-color: vars.$color-dark;
+			border-radius: 4.5rem;
+			min-width: 40rem;
+			padding: 4rem;
+		}
+
+		@media all and (max-width: vars.$media-s) {
+			min-width: 85%;
+		}
 
 		&:not(:last-child)::after {
 			content: '';
@@ -19,11 +39,19 @@
 			width: 1px;
 			height: 60%;
 			background-color: vars.$color-white;
+
+			@media all and (max-width: vars.$media-m) {
+				width: 0;
+			}
 		}
 
 		&_description {
 			color: vars.$color-white;
 			margin-bottom: 2rem;
+
+			@media all and (max-width: vars.$media-m) {
+				// margin-bottom: 0;
+			}
 		}
 	}
 }

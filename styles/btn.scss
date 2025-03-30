@@ -72,10 +72,15 @@
 		margin-left: auto;
 		width: fit-content;
 		padding: 2rem 7.6rem;
+
+		@media all and (max-width: vars.$media-m) {
+			width: 100%;
+		}
 	}
 
 	&_footer {
 		width: fit-content;
 		line-height: 140%;
+		flex: 1 0 23rem;
 	}
 }
