@@ -71,7 +71,7 @@ h2 {
 h3 {
   font-size: 3rem;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1300px) {
   h3 {
     font-size: 2.6rem;
   }
@@ -546,6 +546,12 @@ speech - синтезаторы речи
   overflow: hidden;
   position: relative;
 }
+@media all and (max-width: 500px) {
+  .section_seventh .section__form {
+    background-color: transparent;
+    border-radius: 0;
+  }
+}
 .section__img {
   position: absolute;
   top: 0;
@@ -718,12 +724,17 @@ speech - синтезаторы речи
 }
 .step {
   border-radius: 4.5rem;
+  background-color: #f3f3f3;
   border: 1px solid #191a23;
   box-shadow: 0 5px 0 0 #191a23;
   width: 100%;
   max-width: 123.4rem;
   min-height: 16rem;
-  background-color: #f3f3f3;
+}
+@media all and (max-width: 1300px) {
+  .step {
+    min-height: 13rem;
+  }
 }
 .step__header {
   display: flex;
@@ -734,13 +745,24 @@ speech - синтезаторы речи
 input[type=checkbox]:checked ~ .step__header {
   padding: 4rem 5.7rem 0 5.7rem;
 }
+@media all and (max-width: 1300px) {
+  .step__header {
+    padding: 3rem 3rem;
+  }
+}
 .step__number {
   font-size: 6rem;
   margin-right: 1.9rem;
 }
+@media all and (max-width: 1300px) {
+  .step__number {
+    font-size: 4rem;
+  }
+}
 .step .icon {
   margin-left: auto;
   cursor: pointer;
+  flex-shrink: 0;
 }
 .step__content {
   position: relative;
@@ -934,6 +956,24 @@ input[type=checkbox]:checked ~ .step__header, input[type=checkbox]:checked ~ .st
     padding: 0 6rem;
   }
 }
+@media all and (max-width: 500px) {
+  .form {
+    margin: 0;
+    padding: 0;
+    gap: 3rem;
+  }
+}
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media all and (max-width: 500px) {
+  .form__wrapper {
+    background-color: #f3f3f3;
+    border-radius: 4.5rem;
+    padding: 4rem 3rem;
+  }
+}
 .form__img {
   position: absolute;
   top: 8.1%;
@@ -986,6 +1026,11 @@ input[type=checkbox]:checked ~ .step__header, input[type=checkbox]:checked ~ .st
   display: flex;
   flex-direction: column;
 }
+@media all and (max-width: 500px) {
+  .form__inputs {
+    margin-bottom: 0;
+  }
+}
 .form__inputs input {
   margin-bottom: 2.5rem;
 }
@@ -1008,6 +1053,12 @@ input[type=checkbox]:checked ~ .step__header, input[type=checkbox]:checked ~ .st
   background-color: #000000;
   border-radius: 4.5rem 4.5rem 0 0;
   padding: 5.5rem 6rem 5rem;
+  margin-top: 7rem;
+}
+@media all and (max-width: 1300px) {
+  .footer {
+    margin-top: 3rem;
+  }
 }
 .footer p {
   color: #ffffff;

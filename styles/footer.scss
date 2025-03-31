@@ -4,6 +4,11 @@
 	background-color: vars.$color-black;
 	border-radius: 4.5rem 4.5rem 0 0;
 	padding: 5.5rem 6rem 5rem;
+	margin-top: 7rem;
+
+	@media all and (max-width: vars.$media-m) {
+		margin-top: 3rem;
+	}
 
 	p {
 		color: vars.$color-white;

@@ -96,6 +96,11 @@
 
 			overflow: hidden;
 			position: relative;
+
+			@media all and (max-width: vars.$media-s) {
+				background-color: transparent;
+				border-radius: 0;
+			}
 		}
 	}
 

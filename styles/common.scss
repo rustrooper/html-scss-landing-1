@@ -59,7 +59,7 @@ h2 {
 h3 {
 	font-size: vars.$size-h3;
 
-	@media all and (max-width: vars.$media-s) {
+	@media all and (max-width: vars.$media-m) {
 		font-size: vars.$size-h3-mob;
 	}
 }

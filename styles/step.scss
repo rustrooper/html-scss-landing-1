@@ -2,36 +2,56 @@
 
 .step {
 	border-radius: vars.$radius-card;
+	background-color: vars.$color-grey;
 	border: 1px solid vars.$color-dark;
 	box-shadow: 0 5px 0 0 vars.$color-dark;
-
-	// padding: 4rem 5.7rem;
 
 	width: 100%;
 	max-width: 123.4rem;
 	min-height: 16rem;
 
-	background-color: vars.$color-grey;
+	// display: flex;
+	// align-items: center;
+
+	@media all and (max-width: vars.$media-m) {
+		min-height: 13rem;
+	}
 
 	&__header {
 		display: flex;
 		align-items: center;
 		padding: 4rem 5.7rem;
 		border-radius: 4.5rem 4.5rem 0 0;
+		// flex-grow: 1;
+		// width: 100%;
 
 		input[type='checkbox']:checked ~ & {
 			padding: 4rem 5.7rem 0 5.7rem;
+		}
+
+		@media all and (max-width: vars.$media-m) {
+			padding: 3rem 3rem;
 		}
 	}
 
 	&__number {
 		font-size: vars.$size-number;
 		margin-right: 1.9rem;
+
+		@media all and (max-width: vars.$media-m) {
+			font-size: vars.$size-number-mob;
+		}
+	}
+
+	&__title {
+		// width: min-content;
+		// flex-shrink: 2;
 	}
 
 	.icon {
 		margin-left: auto;
 		cursor: pointer;
+		flex-shrink: 0;
 	}
 
 	&__content {
