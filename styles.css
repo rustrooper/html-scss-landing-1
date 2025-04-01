@@ -728,8 +728,6 @@ speech - синтезаторы речи
   border: 1px solid #191a23;
   box-shadow: 0 5px 0 0 #191a23;
   width: 100%;
-  max-width: 123.4rem;
-  min-height: 16rem;
 }
 @media all and (max-width: 1300px) {
   .step {
@@ -741,14 +739,29 @@ speech - синтезаторы речи
   align-items: center;
   padding: 4rem 5.7rem;
   border-radius: 4.5rem 4.5rem 0 0;
-}
-input[type=checkbox]:checked ~ .step__header {
-  padding: 4rem 5.7rem 0 5.7rem;
+  cursor: pointer;
+  position: relative;
 }
 @media all and (max-width: 1300px) {
   .step__header {
     padding: 3rem 3rem;
   }
+}
+.step__header.step__header_active {
+  background-color: #b9ff66;
+}
+.step__header.step__header_active::after {
+  display: block;
+}
+.step__header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 90.7%;
+  background-color: #000000;
+  display: none;
 }
 .step__number {
   font-size: 6rem;
@@ -765,37 +778,11 @@ input[type=checkbox]:checked ~ .step__header {
   flex-shrink: 0;
 }
 .step__content {
-  position: relative;
   max-height: 0;
   padding: 0 5.7rem;
   border-radius: 0 0 4.5rem 4.5rem;
   overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
-}
-.step__content::before {
-  content: "";
-  position: absolute;
-  top: 0%;
-  height: 1px;
-  width: 0%;
-  transition: width 0.3s ease-in-out;
-  background-color: #000000;
-}
-input[type=checkbox]:checked ~ .step__content {
-  max-height: 16rem;
-  padding-top: 6rem;
-  padding-bottom: 4.1rem;
-  transition: max-height 0.5s ease-in-out;
-}
-input[type=checkbox]:checked ~ .step__content::before {
-  top: 30%;
-  width: 90.7%;
-}
-.step input[type=checkbox] {
-  display: none;
-}
-input[type=checkbox]:checked ~ .step__header, input[type=checkbox]:checked ~ .step__content {
-  background-color: #b9ff66;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
 }
 
 .employee {

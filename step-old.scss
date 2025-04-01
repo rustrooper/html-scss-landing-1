@@ -1,0 +1,98 @@
+@use 'variables' as vars;
+
+.step {
+	border-radius: vars.$radius-card;
+	background-color: vars.$color-grey;
+	border: 1px solid vars.$color-dark;
+	box-shadow: 0 5px 0 0 vars.$color-dark;
+
+	width: 100%;
+	max-width: 123.4rem;
+	min-height: 16rem;
+
+	// display: flex;
+	// align-items: center;
+
+	@media all and (max-width: vars.$media-m) {
+		min-height: 13rem;
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		padding: 4rem 5.7rem;
+		border-radius: 4.5rem 4.5rem 0 0;
+		// flex-grow: 1;
+		// width: 100%;
+
+		input[type='checkbox']:checked ~ & {
+			padding: 4rem 5.7rem 0 5.7rem;
+		}
+
+		@media all and (max-width: vars.$media-m) {
+			padding: 3rem 3rem;
+		}
+	}
+
+	&__number {
+		font-size: vars.$size-number;
+		margin-right: 1.9rem;
+
+		@media all and (max-width: vars.$media-m) {
+			font-size: vars.$size-number-mob;
+		}
+	}
+
+	&__title {
+		// width: min-content;
+		// flex-shrink: 2;
+	}
+
+	.icon {
+		margin-left: auto;
+		cursor: pointer;
+		flex-shrink: 0;
+	}
+
+	&__content {
+		position: relative;
+		max-height: 0;
+		padding: 0 5.7rem;
+		border-radius: 0 0 4.5rem 4.5rem;
+		overflow: hidden;
+		transition: max-height 0.5s ease-in-out;
+		// transition: padding-top 2s ease-in-out;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0%;
+			height: 1px;
+			width: 0%;
+			transition: width 0.3s ease-in-out;
+			background-color: vars.$color-black;
+		}
+
+		input[type='checkbox']:checked ~ & {
+			max-height: 16rem;
+			padding-top: 6rem;
+			padding-bottom: 4.1rem;
+			transition: max-height 0.5s ease-in-out;
+			// transition: padding-top 0.5s ease-in-out;
+		}
+
+		input[type='checkbox']:checked ~ &::before {
+			top: 30%;
+			width: 90.7%;
+		}
+	}
+
+	input[type='checkbox'] {
+		display: none;
+	}
+
+	input[type='checkbox']:checked ~ &__header,
+	input[type='checkbox']:checked ~ &__content {
+		background-color: vars.$color-green;
+	}
+}
