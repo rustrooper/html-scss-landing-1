@@ -381,6 +381,9 @@ speech - синтезаторы речи
   width: 0.6rem;
   height: 1.8rem;
   background-color: #191a23;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -734,6 +737,33 @@ speech - синтезаторы речи
     min-height: 13rem;
   }
 }
+.step.step_active {
+  background-color: #b9ff66;
+}
+.step.step_active .icon_plus::after {
+  opacity: 0;
+  visibility: 0;
+  transition: all 0.3s ease-in-out;
+}
+.step.step_active .step__header::after {
+  height: 1px;
+}
+.step.step_active .step__content {
+  max-height: 100rem;
+  visibility: visible;
+  overflow: auto;
+  opacity: 1;
+  padding: 3rem 5.7rem 4rem;
+  transition: all 0.3s ease-in-out;
+}
+.step__content {
+  visibility: hidden;
+  overflow: hidden;
+  opacity: 0;
+  border-radius: 0 0 4.5rem 4.5rem;
+  max-height: 0;
+  transition: all 0.3s ease-in-out;
+}
 .step__header {
   display: flex;
   align-items: center;
@@ -745,23 +775,17 @@ speech - синтезаторы речи
 @media all and (max-width: 1300px) {
   .step__header {
     padding: 3rem 3rem;
+    padding-bottom: 0;
   }
-}
-.step__header.step__header_active {
-  background-color: #b9ff66;
-}
-.step__header.step__header_active::after {
-  display: block;
 }
 .step__header::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
-  height: 1px;
+  left: 4.65%;
+  height: 0;
   width: 90.7%;
   background-color: #000000;
-  display: none;
 }
 .step__number {
   font-size: 6rem;
@@ -776,13 +800,6 @@ speech - синтезаторы речи
   margin-left: auto;
   cursor: pointer;
   flex-shrink: 0;
-}
-.step__content {
-  max-height: 0;
-  padding: 0 5.7rem;
-  border-radius: 0 0 4.5rem 4.5rem;
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
 }
 
 .employee {
