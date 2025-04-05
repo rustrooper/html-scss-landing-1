@@ -38,6 +38,18 @@
 		text-decoration: underline;
 	}
 
+	&__social-link {
+		.link__decor {
+			width: 3rem;
+			height: 3rem;
+		}
+
+		.link__icon {
+			width: 3rem;
+			height: 3rem;
+		}
+	}
+
 	&__social-media {
 		display: flex;
 		gap: 2rem;

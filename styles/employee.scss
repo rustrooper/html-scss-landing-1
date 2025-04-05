@@ -55,7 +55,18 @@
 	&__linkedin {
 		grid-area: linkedIn;
 		text-align: right;
+		justify-content: end;
 		max-height: 3.4rem;
+
+		.link__decor {
+			width: 3.4rem;
+			height: 3.4rem;
+		}
+
+		.link__icon {
+			width: 3.4rem;
+			height: 3.4rem;
+		}
 	}
 
 	&__content {

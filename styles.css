@@ -732,11 +732,6 @@ speech - синтезаторы речи
   box-shadow: 0 5px 0 0 #191a23;
   width: 100%;
 }
-@media all and (max-width: 1300px) {
-  .step {
-    min-height: 13rem;
-  }
-}
 .step.step_active {
   background-color: #b9ff66;
 }
@@ -756,18 +751,15 @@ speech - синтезаторы речи
   padding: 3rem 5.7rem 4rem;
   transition: all 0.3s ease-in-out;
 }
-.step__content {
-  visibility: hidden;
-  overflow: hidden;
-  opacity: 0;
-  border-radius: 0 0 4.5rem 4.5rem;
-  max-height: 0;
-  transition: all 0.3s ease-in-out;
+@media all and (max-width: 1300px) {
+  .step.step_active .step__content {
+    padding: 3rem 3rem;
+  }
 }
 .step__header {
   display: flex;
   align-items: center;
-  padding: 4rem 5.7rem;
+  padding: 3rem 5.7rem;
   border-radius: 4.5rem 4.5rem 0 0;
   cursor: pointer;
   position: relative;
@@ -775,7 +767,11 @@ speech - синтезаторы речи
 @media all and (max-width: 1300px) {
   .step__header {
     padding: 3rem 3rem;
-    padding-bottom: 0;
+  }
+}
+@media all and (max-width: 500px) {
+  .step__header h3 {
+    font-size: 2.3rem;
   }
 }
 .step__header::after {
@@ -786,6 +782,14 @@ speech - синтезаторы речи
   height: 0;
   width: 90.7%;
   background-color: #000000;
+}
+.step__content {
+  visibility: hidden;
+  overflow: hidden;
+  opacity: 0;
+  border-radius: 0 0 4.5rem 4.5rem;
+  max-height: 0;
+  transition: all 0.3s ease-in-out;
 }
 .step__number {
   font-size: 6rem;
@@ -848,7 +852,16 @@ speech - синтезаторы речи
 .employee__linkedin {
   grid-area: linkedIn;
   text-align: right;
+  justify-content: end;
   max-height: 3.4rem;
+}
+.employee__linkedin .link__decor {
+  width: 3.4rem;
+  height: 3.4rem;
+}
+.employee__linkedin .link__icon {
+  width: 3.4rem;
+  height: 3.4rem;
 }
 .employee__content {
   grid-area: content;
@@ -881,7 +894,7 @@ speech - синтезаторы речи
 .slider__quote {
   border: 1px solid #b9ff66;
   color: #ffffff;
-  border-radius: 4rem;
+  border-radius: 4.5rem;
   padding: 5rem;
   position: relative;
   margin-bottom: 4rem;
@@ -1088,6 +1101,14 @@ speech - синтезаторы речи
   font-size: 1.8rem;
   color: #ffffff;
   text-decoration: underline;
+}
+.footer__social-link .link__decor {
+  width: 3rem;
+  height: 3rem;
+}
+.footer__social-link .link__icon {
+  width: 3rem;
+  height: 3rem;
 }
 .footer__social-media {
   display: flex;

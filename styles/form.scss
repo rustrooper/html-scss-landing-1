@@ -24,7 +24,7 @@
 
 		@media all and (max-width: vars.$media-s) {
 			background-color: vars.$color-grey;
-			border-radius: 4.5rem;
+			border-radius: vars.$radius-card;
 			padding: 4rem 3rem;
 		}
 	}

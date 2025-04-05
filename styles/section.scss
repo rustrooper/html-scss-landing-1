@@ -85,13 +85,13 @@
 
 	&_sixth {
 		#{$this}__slider {
-			border-radius: 4.5rem;
+			border-radius: vars.$radius-card;
 		}
 	}
 
 	&_seventh {
 		#{$this}__form {
-			border-radius: 4.5rem;
+			border-radius: vars.$radius-card;
 			background-color: vars.$color-grey;
 
 			overflow: hidden;

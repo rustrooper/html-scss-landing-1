@@ -19,7 +19,7 @@
 
 	&__card {
 		max-width: 60rem;
-		// width: 100%;
+
 		@media all and (max-width: vars.$media-m) {
 			width: calc(100vw - 7rem);
 		}
@@ -28,7 +28,7 @@
 	&__quote {
 		border: 1px solid vars.$color-green;
 		color: vars.$color-white;
-		border-radius: 4rem;
+		border-radius: vars.$radius-card;
 		padding: 5rem;
 		position: relative;
 		margin-bottom: 4rem;
