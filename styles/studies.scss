@@ -45,13 +45,9 @@
 			}
 		}
 
-		&_description {
+		&-description {
 			color: vars.$color-white;
 			margin-bottom: 2rem;
-
-			@media all and (max-width: vars.$media-m) {
-				// margin-bottom: 0;
-			}
 		}
 	}
 }

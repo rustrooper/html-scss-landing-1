@@ -15,7 +15,6 @@
 
 	&_first {
 		position: relative;
-		// z-index: 1;
 
 		#{$this}__container {
 			display: flex;
@@ -61,14 +60,6 @@
 		}
 	}
 
-	&_fourth {
-		#{$this}__steps {
-			display: flex;
-			flex-direction: column;
-			gap: 3rem;
-		}
-	}
-
 	&_fifth {
 		#{$this}__team {
 			display: grid;
@@ -79,6 +70,10 @@
 			@media all and (max-width: vars.$media-m) {
 				grid-template-columns: repeat(auto-fit, minmax(39rem, 1fr));
 				gap: 3rem;
+			}
+
+			@media all and (max-width: vars.$media-s) {
+				grid-template-columns: 1fr;
 			}
 		}
 	}

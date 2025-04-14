@@ -76,6 +76,7 @@
 		fill: vars.$color-white;
 		width: 2rem;
 		height: 2rem;
+		cursor: pointer;
 		&_right {
 			transform: rotate(30deg);
 		}

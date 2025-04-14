@@ -1,9 +1,9 @@
 function toggleStep() {
-	this.classList.toggle('step_active')
+	this.classList.toggle('list__item_step_active')
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-	const steps = document.querySelectorAll('.step')
+	const steps = document.querySelectorAll('.list__item_step')
 	steps.forEach(step => {
 		step.addEventListener('click', toggleStep)
 	})

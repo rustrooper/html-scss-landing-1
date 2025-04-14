@@ -31,8 +31,8 @@
 
 	&__img {
 		position: absolute;
-		top: 8.1%;
-		bottom: 8.1%;
+		top: 6rem;
+		bottom: 6rem;
 		transform: translate(126%, 0);
 
 		@media all and (max-width: vars.$media-m) {
@@ -53,13 +53,15 @@
 
 		label {
 			font-size: vars.$size-p;
+			margin-top: 0.2rem;
 		}
 
 		input[type='radio'] {
+			flex-shrink: 0;
 			appearance: none;
 			width: 2.8rem;
 			height: 2.8rem;
-			border: 1px solid #000;
+			border: 1px solid vars.$color-black;
 			border-radius: 50%;
 			cursor: pointer;
 			position: relative;
@@ -71,14 +73,14 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			width: 1.5rem; /* Размер внутреннего круга */
+			width: 1.5rem;
 			height: 1.5rem;
-			background-color: transparent; /* По умолчанию прозрачный */
+			background-color: transparent;
 			border-radius: 50%;
 		}
 
 		input[type='radio']:checked::before {
-			background-color: vars.$color-green; /* Цвет внутреннего круга */
+			background-color: vars.$color-green;
 		}
 	}
 
@@ -110,6 +112,19 @@
 
 		textarea {
 			min-height: 19rem;
+		}
+	}
+	&__input-group {
+		display: flex;
+		flex-direction: column-reverse;
+
+		label span {
+			display: none;
+		}
+
+		input[required] + label span,
+		textarea[required] + label span {
+			display: inline;
 		}
 	}
 }
