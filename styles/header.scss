@@ -1,13 +1,20 @@
-@use "variables" as vars;
+@use 'variables' as vars;
 
 .header {
-  display: flex;
-  align-items: center;
-  width: 100%;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: space-between;
+	z-index: 100;
 
-  @media all and (max-width: vars.$media-m) {
-    padding: 0 2rem;
-  }
+	@media all and (max-width: vars.$media-m) {
+		padding: 0 2rem;
+	}
+
+	&__right {
+		display: flex;
+		z-index: 200;
+	}
 }
 
 /* 

@@ -1,0 +1,103 @@
+@use 'variables' as vars;
+
+.slider {
+	padding: 8.4rem 0 6.8rem 0;
+	background-color: vars.$color-dark;
+	overflow: hidden;
+	display: flex;
+	position: relative;
+	align-items: center;
+	flex-direction: column;
+	gap: 12rem;
+
+	&__track {
+		display: flex;
+		justify-content: center;
+		width: max-content;
+		gap: 5rem;
+	}
+
+	&__card {
+		max-width: 60rem;
+
+		@media all and (max-width: vars.$media-m) {
+			width: calc(100vw - 7rem);
+		}
+	}
+
+	&__quote {
+		border: 1px solid vars.$color-green;
+		color: vars.$color-white;
+		border-radius: vars.$radius-card;
+		padding: 5rem;
+		position: relative;
+		margin-bottom: 4rem;
+
+		@media all and (max-width: vars.$media-m) {
+			padding: 3rem;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -1.9rem;
+			left: 7rem;
+			width: 3.5rem;
+			height: 3.5rem;
+			background-color: vars.$color-dark;
+			border-left: 1px solid vars.$color-green;
+			border-bottom: 1px solid vars.$color-green;
+			transform: rotate(-45deg);
+		}
+	}
+
+	&__author {
+		padding-left: 8rem;
+		h4 {
+			color: vars.$color-green;
+		}
+		p {
+			color: vars.$color-white;
+		}
+	}
+
+	&__controls {
+		display: flex;
+		max-width: 56.4rem;
+		max-height: 1.4rem;
+		gap: 19rem;
+
+		@media all and (max-width: vars.$media-m) {
+			gap: 4rem;
+		}
+	}
+
+	&__arrow {
+		fill: vars.$color-white;
+		width: 2rem;
+		height: 2rem;
+		cursor: pointer;
+		&_right {
+			transform: rotate(30deg);
+		}
+
+		&_left {
+			transform: rotate(-150deg);
+		}
+	}
+
+	&__dots {
+		display: flex;
+		gap: 1.9rem;
+	}
+
+	&__dot {
+		width: 1.4rem;
+		height: 1.4rem;
+		fill: vars.$color-white;
+
+		&_green {
+			fill: vars.$color-green;
+		}
+	}
+}

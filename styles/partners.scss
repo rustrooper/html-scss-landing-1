@@ -1,0 +1,17 @@
+@use 'variables' as vars;
+
+.partners {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 2rem 5rem;
+	width: 100%;
+
+	@media all and (max-width: vars.$media-m) {
+		column-gap: 3rem;
+	}
+
+	img {
+		filter: grayscale(100);
+	}
+}

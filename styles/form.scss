@@ -1,0 +1,130 @@
+@use 'variables' as vars;
+
+.form {
+	display: flex;
+	flex-direction: column;
+	max-width: 55.6rem;
+	margin: 6rem 0 8rem 10rem;
+
+	@media all and (max-width: vars.$media-m) {
+		max-width: 61.6rem;
+		margin: 6rem auto;
+		padding: 0 6rem;
+	}
+
+	@media all and (max-width: vars.$media-s) {
+		margin: 0;
+		padding: 0;
+		gap: 3rem;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+
+		@media all and (max-width: vars.$media-s) {
+			background-color: vars.$color-grey;
+			border-radius: vars.$radius-card;
+			padding: 4rem 3rem;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		top: 6rem;
+		bottom: 6rem;
+		transform: translate(126%, 0);
+
+		@media all and (max-width: vars.$media-m) {
+			display: none;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		margin-bottom: 4rem;
+		gap: 3.5rem;
+	}
+
+	&__radio {
+		display: flex;
+		align-items: center;
+		gap: 1.4rem;
+
+		label {
+			font-size: vars.$size-p;
+			margin-top: 0.2rem;
+		}
+
+		input[type='radio'] {
+			flex-shrink: 0;
+			appearance: none;
+			width: 2.8rem;
+			height: 2.8rem;
+			border: 1px solid vars.$color-black;
+			border-radius: 50%;
+			cursor: pointer;
+			position: relative;
+		}
+
+		input[type='radio']::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 1.5rem;
+			height: 1.5rem;
+			background-color: transparent;
+			border-radius: 50%;
+		}
+
+		input[type='radio']:checked::before {
+			background-color: vars.$color-green;
+		}
+	}
+
+	&__inputs {
+		margin-bottom: 4rem;
+		display: flex;
+		flex-direction: column;
+
+		@media all and (max-width: vars.$media-s) {
+			margin-bottom: 0;
+		}
+
+		input {
+			margin-bottom: 2.5rem;
+		}
+
+		label {
+			margin-bottom: 1.2rem;
+			font-size: vars.$size-p-mob;
+		}
+
+		input,
+		textarea {
+			font-size: vars.$size-p;
+			padding: 1.8rem 3rem;
+			border-radius: 1.4rem;
+			border: 1px solid vars.$color-dark;
+		}
+
+		textarea {
+			min-height: 19rem;
+		}
+	}
+	&__input-group {
+		display: flex;
+		flex-direction: column-reverse;
+
+		label span {
+			display: none;
+		}
+
+		input[required] + label span,
+		textarea[required] + label span {
+			display: inline;
+		}
+	}
+}
