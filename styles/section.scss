@@ -131,6 +131,10 @@
 			}
 		}
 
+		&_steps {
+			max-width: 74.4rem;
+		}
+
 		@media all and (max-width: vars.$media-m) {
 			flex-direction: column;
 			row-gap: 3rem;

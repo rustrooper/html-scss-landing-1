@@ -443,12 +443,7 @@ speech - синтезаторы речи
   min-width: 27rem;
 }
 .heading_steps {
-  min-width: 41.2rem;
-}
-@media all and (max-width: 500px) {
-  .heading_steps {
-    min-width: 0;
-  }
+  flex-shrink: 0;
 }
 .heading_bg_white span {
   background-color: #ffffff;
@@ -578,6 +573,9 @@ speech - синтезаторы речи
 }
 .section__header_contact-us p {
   max-width: 32rem;
+}
+.section__header_steps {
+  max-width: 74.4rem;
 }
 @media all and (max-width: 1300px) {
   .section__header {

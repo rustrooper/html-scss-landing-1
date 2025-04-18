@@ -12,11 +12,7 @@
 	}
 
 	&_steps {
-		min-width: 41.2rem;
-
-		@media all and (max-width: vars.$media-s) {
-			min-width: 0;
-		}
+		flex-shrink: 0;
 	}
 
 	&_bg {
